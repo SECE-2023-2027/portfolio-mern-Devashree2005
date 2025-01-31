@@ -1,0 +1,722 @@
+/* General reset for margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global font and text styling */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(120deg, #f4f4f9, #e8effc);
+  color: #333;
+  line-height: 1.6;
+  transition: all 0.3s ease-in-out;
+}
+
+h1, h2, h3 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+
+/* Header styling */
+header {
+  background: linear-gradient(45deg, #3498db, #1abc9c);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border-bottom: 5px solid #2980b9;
+}
+
+header:hover {
+  background: linear-gradient(45deg, #1abc9c, #3498db);
+}
+
+header h1 {
+  margin-bottom: 5px;
+  font-size: 2.8rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+/* Navbar styling */
+.navbar {
+  background: linear-gradient(90deg, #2c3e50, #34495e);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-bottom: 3px solid #1abc9c;
+}
+
+.navbar .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1abc9c;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #1abc9c;
+  transform: scale(1.1);
+}
+
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #1abc9c, #3498db);
+  transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover::after {
+  width: 100%;
+}
+
+/* Footer styling */
+footer {
+  background: linear-gradient(90deg, #2c3e50, #34495e);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1rem;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+  border-top: 3px solid #1abc9c;
+}
+
+footer a {
+  color: #1abc9c;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: #16a085;
+  text-decoration: underline;
+}
+
+/* Homepage styling */
+.homepage {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(120deg, #ffffff, #eaf2f8);
+}
+
+.homepage h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.homepage p {
+  font-size: 1.5rem;
+  color: #34495e;
+  margin-bottom: 40px;
+  transition: color 0.3s ease;
+}
+
+.homepage:hover h1 {
+  color: #1abc9c;
+}
+
+/* Car list styling */
+.car-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px;
+}
+
+.car-card {
+  background: linear-gradient(135deg, #ffffff, #e8f7ff);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.car-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.car-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.car-card img:hover {
+  transform: scale(1.05);
+}
+
+.car-card h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #3498db;
+}
+
+.car-card p {
+  font-size: 1.4rem;
+  color: #2c3e50;
+}
+
+.car-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 15px 25px;
+  background: linear-gradient(90deg, #3498db, #1abc9c);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.car-card a:hover {
+  background: linear-gradient(90deg, #1abc9c, #3498db);
+  transform: scale(1.1);
+}
+
+/* Booking form styling */
+.booking-form {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 40px;
+  background: linear-gradient(135deg, #ffffff, #e8f7ff);
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: border-color 0.3s ease;
+}
+
+.booking-form input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.booking-form label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.booking-form button {
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(90deg, #3498db, #1abc9c);
+  color: white;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.booking-form button:hover {
+  background: linear-gradient(90deg, #1abc9c, #3498db);
+  transform: scale(1.05);
+}
+/* Styling for the LoginSignup component */
+
+.login-signup {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.login-signup h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:last-child {
+  margin-top: 10px;
+  background-color: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+
+button:last-child:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Large labels for username and password */
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+label[for="username"],
+label[for="password"] {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center; 
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Car details container */
+.car-details {
+  max-width: 600px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Car images */
+.car-details img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Car features list */
+.car-details ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.car-details li {
+  background: #ddd;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Book now button */
+.book-now-button {
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.book-now-button:hover {
+  background: #0056b3;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Enlarged "Enter Booking Amount" label */
+.modal-content h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.modal-content input {
+  padding: 10px;
+  width: 80%;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-content button {
+  padding: 10px 15px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:first-of-type {
+  background: #28a745;
+  color: white;
+}
+
+.modal-content button:last-of-type {
+  background: #dc3545;
+  color: white;
+}
+
+/* Booking Form */
+.booking-form {
+  max-width: 400px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.booking-form label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.booking-form input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.booking-form button {
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.booking-form button:hover {
+  background: #0056b3;
+}
+
+/* Receipt styling */
+.receipt {
+  max-width: 400px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ 
+}
+
+.receipt h2 {
+  font-size: 22px;
+}
+
+.receipt p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.receipt button {
+  background: #dc3545;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.receipt button:hover {
+  background: #a71d2a;
+}
+/* App.css or Signup.css */
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f7fa;
+  font-family: Arial, sans-serif;
+
+}
+h2{
+  text-align: center;
+  position: relative;
+  bottom: 220px;
+  left: 160px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  border-color: #5c6bc0;
+  outline: none;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #5c6bc0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #3f51b5;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.login-link a {
+  color: #5c6bc0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+/* Contact Us Page Styles */
+/* General Styles */
+.contact-container {
+  font-family: Arial, sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Title */
+.contact-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Description */
+.contact-description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Sections */
+.contact-info,
+.business-hours,
+.social-media {
+  margin-bottom: 30px;
+}
+
+/* Paragraph Styling */
+.contact-info p,
+.business-hours p,
+.social-media p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Links */
+a {
+  color: #1D4ED8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 15px;
+  }
+
+  .contact-title {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* CarCard Container */
+.car-card {
+  width: 300px;  
+  padding: 15px;  
+  margin: 20px;   
+  border: 1px solid #ddd;  
+  border-radius: 10px;  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+  text-align: center;  
+  background-color: #fff; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Car Image */
+.car-image {
+  width: 100%;  
+  height: auto;  
+  border-radius: 8px;  
+  object-fit: cover;  
+}
+
+/* Car Name */
+.car-card h3 {
+  font-size: 18px;  
+  font-weight: bold;  
+  color: #333;  
+  margin-top: 10px;  
+}
+
+
+.car-card p {
+  font-size: 14px; 
+  color: #666;  
+  margin: 10px 0;  
+}
+
+
+.car-card a {
+  display: inline-block;
+  padding: 8px 16px;  
+  font-size: 14px;  
+  background-color: #007bff; 
+  color: white;  
+  text-decoration: none;  
+  border-radius: 5px;  
+  margin-top: 10px;  
+}
+
+/* Hover Effects */
+.car-card:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.car-card a:hover {
+  background-color: #0056b3;  
+}
